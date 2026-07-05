@@ -6,5 +6,20 @@
             "destination": "/",
             "permenant": true
         }
+    ],
+    "headers": [
+        {
+            "source": "/(.*).(glb|gltf|bin)",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/octet-stream"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
+        }
     ]
 }
