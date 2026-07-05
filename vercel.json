@@ -9,16 +9,19 @@
     ],
     "headers": [
         {
-            "source": "/(.*)(glb|gltf|bin)",
+            "source": "/**/*.{glb,gltf,bin"},
             "headers": [
                 {
                     "key": "Content-Type",
-                    "value": "application/octet-stream"
+                    "value": "model/gltf-binary"
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
                     "value": "*"
-                }
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "no-store, must-revalidate"                }
             ]
         }
     ]
