@@ -4,12 +4,12 @@
         {
             "source": "/index.html", 
             "destination": "/",
-            "permenant": true
+            "permanent": true
         }
     ],
     "headers": [
         {
-            "source": "/(.*).(glb|gltf|bin)",
+            "source": "/(.*)(glb|gltf|bin)",
             "headers": [
                 {
                     "key": "Content-Type",
