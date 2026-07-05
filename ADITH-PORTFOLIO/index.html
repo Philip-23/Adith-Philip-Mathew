@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adith Philip Mathew | Portfolio</title>
+    
+    <link href="../assets/utils/font.css" rel="stylesheet">
+    
+    <script src="./assets/utils/tailwind-3.4.17"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#3b82f6', dark: '#0f172a', darker: '#020617' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        
+        body {
+            background-color: #020617;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #f8fafc;
+        }
+        
+        
+        
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+        }
+        
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <nav class="fixed w-full z-50 glass border-b-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter text-white">
+                ADITH  PHILIP <span class="text-primary">MATHEW</span>
+            </h1>
+            <ul class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <li class="hover:text-primary transition-colors cursor-pointer"><a href="#about">About</a></li>
+                <li class="hover:text-primary transition-colors cursor-pointer"><a href="#process">Process</a></li>
+                <li class="hover:text-primary transition-colors cursor-pointer"><a href="#projects">Projects</a></li>
+                <li class="hover:text-primary transition-colors cursor-pointer"><a href="#skills">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-[70vh] flex flex-col justify-center">
+        <div class="inline-block mb-4 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium w-max">
+            Mechanical Engineer
+        </div>
+        <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Adith</span>
+        </h2>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
+            I am a Mechanical Engineering graduate with a strong passion for CAD modeling, product design, and engineering simulation. My interests lie in developing accurate and functional mechanical designs, from concept to virtual validation, using modern CAD and CAE tools.
+        </p>
+        <div>
+            <a href="#projects" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30">
+                View My Work
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <h3 class="text-3xl font-bold mb-2">Design Process</h3>
+            <div class="h-1 w-20 bg-primary rounded"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute -right-4 -top-4 text-7xl font-bold text-slate-800/50 group-hover:text-primary/10 transition-colors">01</div>
+                <h4 class="text-xl font-semibold mb-3 relative z-10 text-white">Research</h4>
+                <p class="text-slate-400 relative z-10 text-sm leading-relaxed">Understanding the problem, defining parameters, and analyzing mechanical constraints.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute -right-4 -top-4 text-7xl font-bold text-slate-800/50 group-hover:text-primary/10 transition-colors">02</div>
+                <h4 class="text-xl font-semibold mb-3 relative z-10 text-white">CAD Design</h4>
+                <p class="text-slate-400 relative z-10 text-sm leading-relaxed">Precision 3D modeling and assembly creation using Fusion 360 and SolidWorks.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute -right-4 -top-4 text-7xl font-bold text-slate-800/50 group-hover:text-primary/10 transition-colors">03</div>
+                <h4 class="text-xl font-semibold mb-3 relative z-10 text-white">Simulation</h4>
+                <p class="text-slate-400 relative z-10 text-sm leading-relaxed">Rigorous CFD & thermal analysis using ANSYS to predict real-world behavior.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute -right-4 -top-4 text-7xl font-bold text-slate-800/50 group-hover:text-primary/10 transition-colors">04</div>
+                <h4 class="text-xl font-semibold mb-3 relative z-10 text-white">Testing</h4>
+                <p class="text-slate-400 relative z-10 text-sm leading-relaxed">Iterative prototype validation, mechanical optimization, and final review.</p>
+            </div>
+        </div>
+    </section> 
+
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <h3 class="text-3xl font-bold mb-2">Selected Projects</h3>
+            <div class="h-1 w-20 bg-primary rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">Engine Piston</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Engine Piston and Crank Shaft Assembly</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">A mechanical linkage that converts the up-and-down linear motion of pistons into continuous rotational power.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location='./Piston&Crankshaft'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">Jet Engine</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Aeroplane Jet Engine</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Designed and modeled a conceptual jet engine assembly featuring multi-stage compressors, turbine sections, and an exposed cutaway casing to visualize internal turbomachinery architecture and aerospace propulsion mechanics.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location = './Jet_Engine'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">Robotic Arm</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Robotic Arm</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Designed and simulated a multi-axis robotic arm assembly featuring articulated joints, rotational actuators, and a functional gripper mechanism to demonstrate realistic industrial automation and robotic motion control.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location = './Robotic_Arm'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">Open Differential</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Open Differential Assembly</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Designed and modeled a conceptual automotive differential assembly featuring a ring gear, bevel gears, differential carrier, axle shafts, and an exposed cutaway housing to visualize internal power transmission, torque distribution, and differential operating mechanics.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location = './Differential'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">Two Stroke Engine</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Two Stroke Petrol Engine Assembly</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Designed and modeled a conceptual single-cylinder air-cooled 2-stroke petrol engine with a 59 mm bore and 42 mm stroke, incorporating the piston-cylinder assembly, crankshaft mechanism, cooling fins, and intake, transfer, and exhaust ports to demonstrate internal engine architecture, scavenging processes, and power transmission mechanics.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location = './2 Stroke engine'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">BTMS</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Hybrid Battery Thermal Management System Simulation</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Designed and modeled a hybrid dual-medium Battery Thermal Management System (BTMS) featuring a 6-cell staggered cylindrical module layout enclosed within an active flow channel, incorporating localized organic Phase Change Material (PCM) jackets, conjugate heat transfer interfaces, and a forced air-cooling duct to demonstrate transient latent heat storage mechanics, multiphase melting boundary propagation, and system thermal gradient mitigation.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location = './BTMS'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl flex flex-col h-full">
+                <div class="h-48 bg-slate-800/50 rounded-t-2xl border-b border-white/5 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                    <h4 class="text-2xl font-bold text-white z-10">Turbocharger</h4>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-semibold mb-2">Turbocharger Assembly</h4>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">Designed and modeled a conceptual turbocharger assembly featuring a centrifugal compressor, radial inflow turbine, integrated CHRA, and a half cutaway casing to visualize internal airflow paths, rotating components, and forced-induction mechanics.</p>
+                    <button class="w-full py-3 bg-white/5 hover:bg-primary text-white rounded-lg transition-colors border border-white/10 hover:border-primary text-sm font-medium" onclick="window.location = './Turbocharger'">
+                        View Case Study
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between">
+            <div>
+                <h3 class="text-3xl font-bold mb-2">Technical Software</h3>
+                <div class="h-1 w-20 bg-primary rounded mx-auto md:mx-0"></div>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <span class="px-6 py-3 glass-card rounded-full text-blue-300 font-medium tracking-wide flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-blue-500"></div> Fusion 360
+            </span>
+            <span class="px-6 py-3 glass-card rounded-full text-cyan-300 font-medium tracking-wide flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-cyan-500"></div> ANSYS CFD
+            </span>
+            <span class="px-6 py-3 glass-card rounded-full text-red-300 font-medium tracking-wide flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-red-500"></div> SolidWorks
+            </span>
+            <span class="px-6 py-3 glass-card rounded-full text-emerald-300 font-medium tracking-wide flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-emerald-500"></div> AutoCAD
+            </span>
+        </div>
+    </section>
+
+    <footer class="mt-20 border-t border-white/10 glass">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center">
+            <p>© 2026 Adith Philip Mathew | Engineering Portfolio</p>
+        </div>
+    </footer>
+
+</body>
+</html>

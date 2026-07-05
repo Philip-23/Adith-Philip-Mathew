@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Robotic Arm Assembly | Project Details</title>
+
+    <link href="../assets/utils/font.css" rel="stylesheet">
+
+    <script src="../assets/utils/tailwind-3.4.17"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="module" src="../assets/utils/model-viewer.min.js"></script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            --poster-color: transparent;
+        }
+
+        model-viewer:focus-visible {
+            outline: none;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .gallery img,
+        .gallery video {
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            overflow: hidden;
+            width: 700px;
+            height: 400px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="w-full pt-8 px-6 max-w-6xl mx-auto">
+        <a href="../index.html"
+           class="inline-flex items-center text-slate-400 hover:text-white transition-colors group">
+
+            <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                </path>
+
+            </svg>
+
+            Back to Portfolio
+        </a>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-6 pb-20">
+
+        <!-- HERO -->
+        <header class="py-10 md:py-16">
+
+            <div class="inline-block mb-4 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium w-max">
+                Robotics & Automation
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-white">
+                Industrial Robotic Arm
+            </h1>
+
+            <p class="text-lg text-slate-400 max-w-3xl leading-relaxed">
+                A multi-axis robotic arm assembly designed for industrial automation applications, featuring articulated joints, rotational actuators, and a functional gripping mechanism for object manipulation and motion simulation.
+            </p>
+
+        </header>
+
+        <!-- 3D MODEL SECTION -->
+        <section class="mb-12 md:mb-16">
+
+            <div class="glass-card p-2 rounded-2xl relative border border-white/10 shadow-2xl shadow-blue-500/10 w-full h-[400px] md:h-[550px] bg-[#0f172a] overflow-hidden">
+
+                <!-- STATUS -->
+                <div class="absolute top-4 left-4 md:top-6 md:left-6 z-10 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-2 text-xs text-white">
+
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+
+                    Interactive Robotic Assembly
+                </div>
+
+                <!-- DOWNLOAD -->
+                <a href="download/Robotic_Arm.zip"
+                   download
+                   class="absolute top-4 right-4 md:top-6 md:right-6 z-10 flex items-center justify-center w-8 h-8 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-slate-300 hover:text-white hover:bg-white/20 transition-all"
+                   title="Download 3D Model">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="2"
+                         stroke="currentColor"
+                         class="w-4 h-4">
+
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+
+                    </svg>
+                </a>
+
+                <!-- MODEL VIEWER -->
+                <model-viewer
+                    src="model/Robotic_Arm.glb"
+                    alt="Robotic Arm CAD Model"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="2"
+                    shadow-softness="0.2"
+                    exposure="0.2"
+                    environment-image="neutral"
+                    orientation="-90deg -90deg 90deg"
+                    camera-orbit="0deg 75deg auto">
+
+
+                    <div slot="poster"
+                         class="w-full h-full flex items-center justify-center text-slate-500 text-sm">
+                        Loading 3D Model...
+
+                    </div>
+
+                </model-viewer>
+
+            </div>
+
+            <!-- IMAGE / VIDEO -->
+            <div class="gallery">
+
+                <img src="image/Robotic Arm-1.png" alt="Industrial Robotic Arm"/>
+                <img src="image/Robotic Arm-2.png" alt="Industrial Robotic Arm"/>
+
+                <video controls autoplay muted loop>
+                    <source src="video/Robotic Arm Working.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENT -->
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+
+            <!-- SIDEBAR -->
+            <div class="w-full lg:w-1/3 space-y-6 lg:sticky lg:top-8">
+
+                <div class="glass-card p-6 md:p-8 rounded-2xl border-t-4 border-t-blue-500">
+
+                    <h3 class="text-xs md:text-sm uppercase tracking-widest text-slate-500 font-semibold mb-2">
+                        Objective
+                    </h3>
+
+                    <p class="text-slate-300 text-sm md:text-base">
+                        To design and simulate a multi-joint robotic manipulator capable of realistic articulated movement and precision gripping for industrial automation concepts.
+                    </p>
+
+                </div>
+
+                <div class="glass-card p-6 md:p-8 rounded-2xl">
+
+                    <h3 class="text-xs md:text-sm uppercase tracking-widest text-slate-500 font-semibold mb-2">
+                        Tech Stack
+                    </h3>
+
+                    <p class="text-lg md:text-xl font-medium text-white mb-1">
+                        Fusion 360
+                    </p>
+
+                    <p class="text-slate-400 text-xs md:text-sm">
+                        Assembly Design · Motion Simulation · Joint Constraints
+                    </p>
+
+                </div>
+
+                <div class="glass-card p-6 md:p-8 rounded-2xl">
+
+                    <h3 class="text-xs md:text-sm uppercase tracking-widest text-slate-500 font-semibold mb-4">
+                        Key Learnings
+                    </h3>
+
+                    <ul class="space-y-3 text-slate-300 text-sm">
+
+                        <li class="flex items-start gap-3">
+
+                            <svg class="w-5 h-5 text-blue-400 shrink-0"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+
+                            </svg>
+
+                            Multi-axis joint design
+
+                        </li>
+
+                        <li class="flex items-start gap-3">
+
+                            <svg class="w-5 h-5 text-blue-400 shrink-0"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+
+                            </svg>
+
+                            Motion constraint implementation
+
+                        </li>
+
+                        <li class="flex items-start gap-3">
+
+                            <svg class="w-5 h-5 text-blue-400 shrink-0"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+
+                            </svg>
+
+                            End-effector and gripper mechanics
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="w-full lg:w-2/3 space-y-6">
+
+                <!-- TECHNICAL IMPLEMENTATION -->
+                <div class="glass-card p-6 md:p-10 rounded-2xl h-full">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400">
+
+                            <svg class="w-6 h-6"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                </path>
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                </path>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="text-xl md:text-2xl font-bold text-white">
+                            Technical Implementation
+                        </h2>
+
+                    </div>
+
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                        The robotic arm assembly was developed using articulated joint systems and constrained rotational axes to replicate realistic industrial robotic movement. Each section was modeled independently and integrated into a fully functional multi-link mechanism.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+
+                            <h4 class="text-white font-medium mb-1">
+                                Revolute Joint System
+                            </h4>
+
+                            <p class="text-slate-400 text-sm">
+                                Rotational joints were implemented across the shoulder, elbow, and wrist sections to enable flexible multi-directional movement.
+                            </p>
+
+                        </div>
+
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+
+                            <h4 class="text-white font-medium mb-1">
+                                End-Effector Design
+                            </h4>
+
+                            <p class="text-slate-400 text-sm">
+                                A mechanical gripper mechanism was integrated to simulate object handling and industrial pick-and-place operations.
+                            </p>
+
+                        </div>
+
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+
+                            <h4 class="text-white font-medium mb-1">
+                                Motion Simulation
+                            </h4>
+
+                            <p class="text-slate-400 text-sm">
+                                Joint constraints and rotational limits were configured to achieve realistic and synchronized robotic articulation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="border-l-4 border-blue-500 pl-4 py-1">
+
+                        <p class="text-blue-200 text-sm md:text-base italic">
+                            "The robotic arm demonstrates realistic articulated motion and mechanical coordination suitable for automation and industrial robotics visualization."
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ENGINEERING INSIGHT -->
+                <div class="glass-card p-6 md:p-10 rounded-2xl">
+
+                    <h2 class="text-xl md:text-2xl font-bold text-white mb-4">
+                        Engineering Insight
+                    </h2>
+
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                        This project demonstrates the fundamentals of robotic manipulator design, including articulated linkages, constrained rotational motion, and gripper-based interaction mechanisms commonly used in industrial automation systems.
+                    </p>
+
+                    <h4 class="text-white font-medium mb-3">
+                        Key Design Considerations:
+                    </h4>
+
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm">
+
+                        <li class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-lg">
+                            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                            Joint alignment accuracy
+                        </li>
+
+                        <li class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-lg">
+                            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                            Motion range optimization
+                        </li>
+
+                        <li class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-lg">
+                            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                            Structural rigidity
+                        </li>
+
+                        <li class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-lg">
+                            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                            End-effector stability
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 glass mt-10">
+
+        <div class="max-w-6xl mx-auto px-6 py-8 text-center text-slate-500 text-sm">
+            <p>© 2026 Adith Philip Mathew | Mechanical Engineering Portfolio</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
